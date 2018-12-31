@@ -1,0 +1,97 @@
+<%include header.ejs%>
+		<div id="wrapper">
+			<%include logo.ejs%>
+				<%include nav.ejs%>
+					<%include slider.ejs%>
+
+
+
+
+						<div id="page">
+							<div id="content">
+								<div class="box">
+									<h2>User Login...</h2>
+									<br>
+									<br>
+									<h2 style="color: green">
+										<%= result%>
+									</h2>
+									<form action="/login" method="POST">
+										<table cellspacing="20">
+											<tr>
+												<td>
+													Username
+												</td>
+												<td>
+													<input type="email" name="unm" value="<%= u %>" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Password
+												</td>
+												<td>
+													<input type="password" name="pass" value="<%= p %>" />
+												</td>
+											</tr>
+											 <tr>
+                        <td>
+                            <input type="checkbox" name="chk" value='remember'/> remember me?    
+                            </td>
+                        </tr>
+                       
+											<tr>
+												<td></td>
+												<td>
+													<input type="submit" name="s" value="login" />
+												</td>
+											</tr>
+
+										</table>
+									</form>
+
+								</div>
+							</div>
+
+
+
+
+
+							<div id="sidebar">
+								<div class="box">
+									<h3>Login with</h3>
+									<ul class="list">
+										<li class="first">
+											<a href="#">Facebook</a>
+										</li>
+										<li>
+											<a href="#">Google</a>
+										</li>
+										<li>
+											<a href="#">Twitter</a>
+										</li>
+										<li>
+											<a href="#">LinkedIN</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						<div id="page-bottom">
+							<div id="page-bottom-content">
+								<h3>Product Info</h3>
+								<p>
+									Product certification or product qualification is the process of certifying that a certain product has passed performance
+									tests and quality assurance tests, and meets qualification criteria stipulated in contracts, regulations, or specifications
+									(typically called "certification schemes" in the product certification ...
+								</p>
+							</div>
+							<br class="clearfix" />
+						</div>
+		</div>
+		<%include footer.ejs%>

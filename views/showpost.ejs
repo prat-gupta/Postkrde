@@ -1,0 +1,81 @@
+<% include header.ejs%>
+		<div id="wrapper">
+			<%include logo.ejs%>
+				<%include nav.ejs%>
+					<%include slider.ejs%>
+						<div id="page">
+							<div id="content">
+								<div class="box">
+									<h2>Posts ...</h2>
+									<div  id="my_cat">
+                                        
+										<% for(i=0;i<mycat.length;i++){ %>
+                                                <hr>
+											<div id="mycategory" >
+										<img src='../uploads/<%= mycat[i].image1 %>' id="img_style" />
+                                                <div id="mypost">
+                                                        <b>Title :&nbsp;	<%= mycat[i].title %></b><br/>
+                                                        <b>price :&nbsp;	<%= mycat[i].price %></b><br/>
+                                                        <b>City :&nbsp; 	<%= mycat[i].city %></b><br/>
+                                                        <b>email :&nbsp;	<%= mycat[i].email %></b><br/>
+                                                        <a href="/showdetails" style="color: cadetblue;">click here to see details>>..</a><br/>
+                                                    </div>
+                                                
+                                    </div>
+                                        
+										<% } %>
+									</div>
+
+									<style>
+										#my_cat{
+											height: auto;
+									 width: 600px;
+									 }
+									#mycategory{
+									 height: 150px;
+									 width: 220px;
+									}
+									#img_style
+									{
+										height: 120px;
+										width: 200px;
+                                        margin-left:-5%;
+                                        float: left;
+									}
+                                    #mypost{
+                                        height: auto;
+										width: 400px;
+                                    
+                                    }
+									</style>
+
+								</div>
+							</div>
+							<div id="sidebar">
+								<div class="box">
+									<h3>Categories</h3>
+									<ul class="list">
+											<% for(i=0;i<mycat1.length;i++){ %>
+										<li class="first">
+											
+											<a href="/subcategories/<%= mycat1[i].cat_nm %>"><%= mycat1[i].cat_nm %></a>
+										</li>
+										<% } %>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<br class="clearfix" />
+						<div id="page-bottom">
+							<div id="page-bottom-content">
+								<h3>Product Info</h3>
+								<p>
+									Product certification or product qualification is the process of certifying that a certain product has passed performance
+									tests and quality assurance tests, and meets qualification criteria stipulated in contracts, regulations, or specifications
+									(typically called "certification schemes" in the product certification ...
+								</p>
+							</div>
+							<br class="clearfix" />
+						</div>
+		</div>
+		<%include footer.ejs%>

@@ -1,0 +1,80 @@
+<%include header.ejs%>
+
+    <div id="wrapper">
+		<%include logo.ejs%>
+		<%include adminnav.ejs%>
+		<%include slider.ejs%>
+		
+
+		
+
+	<div id="page">
+		<div id="content">
+			<div class="box">
+				<h2>Add Category...</h2>
+				<h2 style="color: green"><%= result%></h2>
+				<form action="/admin/addcategory" method="POST" enctype="multipart/form-data">
+					<table cellspacing="20">
+						<tr>
+							<td>
+								Category Name
+							</td>
+							<td>
+								<input type="text" name="cat_nm" placeholder="Enter Category" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								upload Image
+							</td>
+							<td>
+								<input type="file" name="cat_img_nm" />
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="submit" name="s" value="add" />
+							</td>
+						</tr>
+
+					</table>
+				</form>	
+			
+			</div>
+		</div>
+		
+
+
+		
+
+		<div id="sidebar">
+				<div class="box">
+					<h3>Login with</h3>
+					<ul class="list">
+						<li class="first"><a href="#">Facebook</a></li>
+						<li><a href="#">Google</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">LinkedIN</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+
+
+
+			
+
+			<div id="page-bottom">
+					<div id="page-bottom-content">
+						<h3>Product Info</h3>
+						<p>
+							Product certification or product qualification is the process of certifying that a certain product has passed performance tests and quality assurance tests, and meets qualification criteria stipulated in contracts, regulations, or specifications (typically called "certification schemes" in the product certification ...
+						</p>
+					</div>
+					<br class="clearfix" />
+				</div>
+			</div>
+			
+      
+    <%include footer.ejs%>
