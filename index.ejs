@@ -1,0 +1,75 @@
+<% include header.ejs%>
+		<div id="wrapper">
+			<%include logo.ejs%>
+				<%include nav.ejs%>
+					<%include slider.ejs%>
+				
+						<div id="page">
+							<div id="content">
+								<div class="box">
+									<h2>Categories ...</h2>
+									<div  id="my_cat">
+										<% for(i=0;i<mycat.length;i++){ %>
+											<a href="/subcategories/<%= mycat[i].cat_nm %>">
+										<div id="mycategory" >
+												<center>
+													<img src='uploads/<%= mycat[i].cat_img_nm %>' id="img_style" />
+								<b>	<%= mycat[i].cat_nm %></b></center>	
+										</div></a>
+										<% } %>
+									</div>
+
+									<style>
+										#my_cat{
+											height: 450px;
+									 width: 600px;
+									 }
+									#mycategory{
+									 height: 150px;
+									 width: 200px;
+									 float: left;
+
+									}
+									#img_style
+									{
+										height: 120px;
+										width: 200px;
+									}
+									</style>
+
+								</div>
+							</div>
+							<div id="sidebar">
+								<div class="box">
+									<h3>Login with</h3>
+									<ul class="list">
+										<li class="first">
+											<a href="#">Facebook</a>
+										</li>
+										<li>
+											<a href="#">Google</a>
+										</li>
+										<li>
+											<a href="#">Twitter</a>
+										</li>
+										<li>
+											<a href="#">LinkedIN</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<br class="clearfix" />
+						<div id="page-bottom">
+							<div id="page-bottom-content">
+								<h3>Product Info</h3>
+								<p>
+									Product certification or product qualification is the process of certifying that a certain product has passed performance
+									tests and quality assurance tests, and meets qualification criteria stipulated in contracts, regulations, or specifications
+									(typically called "certification schemes" in the product certification ...
+								</p>
+							</div>
+							<br class="clearfix" />
+						</div>
+		</div>
+		<%include footer.ejs%>

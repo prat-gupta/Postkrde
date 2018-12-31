@@ -1,0 +1,79 @@
+<%include header.ejs%>
+
+    <body>
+
+        <div id="wrapper">
+            <%include logo.ejs%>
+                <%include adminnav.ejs%>
+                    <%include slider.ejs%>
+
+
+
+
+                        <div id="page">
+                            <div id="content">
+                                <div class="box">
+                                    <table border="2px">
+                                        <tr>
+                                            <td>regid</td>
+                                            <td>name</td>
+                                            <td>uname</td>
+                                            <td>address</td>
+                                            <td>mobile no.</td>
+                                            <td>gender</td>
+                                            <td>delete user</td>
+                                        </tr>
+                                        <% for(i=0;i<mycat.length;i++){ %>
+                                            <tr>
+                                                <td>
+                                                    <%= mycat[i].regid %>
+                                                </td>
+                                                <td>
+                                                    <%= mycat[i].nm %>
+                                                </td>
+                                                <td>
+                                                    <%= mycat[i].unm %>
+                                                </td>
+                                                <td>
+                                                    <%= mycat[i].address %>
+                                                </td>
+                                                <td>
+                                                    <%= mycat[i].mob %>
+                                                </td>
+                                                <td>
+                                                    <%= mycat[i].gender %>
+                                                </td>
+                                                <td>
+                                                    <% if(mycat[i].adminstat==1){%>
+                                                                <a href="/admin/deleteuser/<%= mycat[i].regid %>" style="color:red;">Block User</a>
+                                                                <%}else {%>
+                                                                <a href="/admin/deleteuser/<%= mycat[i].regid %>">Unblock User</a>
+                                                                <%}%>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <br class="clearfix" />
+                        <div id="page-bottom">
+                            <div id="page-bottom-content">
+                                <h3>Product Info</h3>
+                                <p>
+                                    Product certification or product qualification is the process of certifying that a certain product has passed performance
+                                    tests and quality assurance tests, and meets qualification criteria stipulated in contracts,
+                                    regulations, or specifications (typically called "certification schemes" in the product
+                                    certification ...
+                                </p>
+                            </div>
+                            <br class="clearfix" />
+                        </div>
+        </div>
+
+
+
+        <%include footer.ejs%>
+
+
+    </body>

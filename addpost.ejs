@@ -1,0 +1,152 @@
+<%include header.ejs%>
+    <div id="wrapper">
+        <%include logo.ejs%>
+            <%include nav.ejs%>
+                <%include slider.ejs%>
+                    <div id="page">
+                        <div id="content">
+                            <div class="box">
+                                <h2>User Registration...</h2>
+                                <br>
+                                <br>
+                                <h2 style="color: green">
+                                    <%= result%>
+                                </h2>
+                                <form action="/addpost" method="POST" enctype="multipart/form-data">
+                                    <table cellspacing="20">
+                                        <tr>
+                                            <td>
+                                                Post Title
+                                            </td>
+                                            <td>
+                                                <input type="text" name="title" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Categories
+                                            </td>
+                                            <td>
+                                                <select name="cat_nm">
+                                                    <option>select</option>
+                                                    <% for(i=0;i<mycat.length;i++){ %>
+                                                        <option>
+                                                            <%= mycat[i].sub_cat_nm%>
+                                                        </option>
+                                                        <% } %>
+                                                </select>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Description
+                                            </td>
+                                            <td>
+                                                <textarea name="description"></textarea>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Price
+                                            </td>
+                                            <td>
+                                                <input type="text" name="price" />
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Email Id:
+                                            </td>
+                                            <td>
+                                                <input type="email" name="email" />
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Mobile No.
+                                            </td>
+                                            <td>
+                                                <input type="text" name="mobile" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                City
+                                            </td>
+                                            <td>
+                                                <select name="city">
+                                                    <option>Select</option>
+                                                    <option>Indore</option>
+                                                    <option>Bhopal</option>
+                                                    <option>delhi</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Address</td>
+                                            <td>
+                                                <textarea name="address"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Add image(s)</td>
+                                            <td>
+                                                <input type="file" value="Oj186920VeVm5ea5zqfPjRWUCCEWYuQ5-empty.png" name="image1" />
+                                                <br/>
+                                                <br/>
+                                                <input type="file" value="Oj186920VeVm5ea5zqfPjRWUCCEWYuQ5-empty.png " name="image2" />
+                                                <br/>
+                                                <br/>
+                                                <input type="file" value="Oj186920VeVm5ea5zqfPjRWUCCEWYuQ5-empty.png " name="image3" />
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <input type="submit" name="s" value="Add Post" />
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="sidebar">
+                            <div class="box">
+                                <h3>Login with</h3>
+                                <ul class="list">
+                                    <li class="first">
+                                        <a href="#">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Google</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">LinkedIN</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br class="clearfix" </div>
+                        <div id="page-bottom">
+                            <div id="page-bottom-content">
+                                <h3>Product Info</h3>
+                                <p>
+                                    Product certification or product qualification is the process of certifying that a certain product has passed performance
+                                    tests and quality assurance tests, and meets qualification criteria stipulated in contracts,
+                                    regulations, or specifications (typically called "certification schemes" in the product
+                                    certification ...
+                                </p>
+                            </div>
+                            <br class="clearfix" />
+                        </div>
+                    </div>
+                    <%include footer.ejs%>
